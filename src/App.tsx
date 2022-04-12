@@ -1,10 +1,26 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {StatusBar, StyleSheet, View} from 'react-native';
+import CarItem from './components/CarItem';
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <Text>Hello World</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <CarItem />
+
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="dark-content"
+      />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
