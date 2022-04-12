@@ -1,22 +1,17 @@
 import React from 'react';
-import {ImageBackground, ImageSourcePropType, Text, View} from 'react-native';
+import {ImageBackground, Text, View} from 'react-native';
+import CarProps from '../../@types/Car';
 import StyledButton from '../StyledButton';
 
 import styles from './styles';
 
 type CarItemProps = {
-  name: string;
-  tagline: string;
-  taglineCTA?: string;
-  image: ImageSourcePropType;
+  car: CarProps;
 };
 
-export default function CarItem({
-  name,
-  tagline,
-  taglineCTA,
-  image,
-}: CarItemProps) {
+export default function CarItem({car}: CarItemProps) {
+  const {name, tagline, taglineCTA, image} = car;
+
   return (
     <View style={styles.carContainer}>
       <ImageBackground source={image} style={styles.image} />
