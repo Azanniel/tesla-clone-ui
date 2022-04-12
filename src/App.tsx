@@ -1,6 +1,7 @@
 import React from 'react';
 import {StatusBar, StyleSheet, View} from 'react-native';
 import CarsList from './components/CarsList';
+import Header from './components/Header';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       />
 
       <View style={styles.container}>
+        <Header />
         <CarsList />
       </View>
     </>
